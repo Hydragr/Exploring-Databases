@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>Pilot needs to be fly</h1>
+	<p>add a pilot to our database</p>
+	<form method="post">
+		{{ form.hidden_tag() }}
+		{{ form.first_name.label }} {{ form.first_name()}}<br>
+		{{ form.last_name.label }} {{ form.last_name()}}<br>
+		{{ form.age.label }} {{ form.age()}}<br>
+		{{ form.rank.label }} {{ form.rank()}}<br>
+		{{ form.submit() }}
+	</form>
+</div>
+{% endblock %}
